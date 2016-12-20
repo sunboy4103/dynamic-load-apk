@@ -33,13 +33,7 @@ android {
 }
 
 dependencies {
-    provided files('../../../lib/build/libs/lib.jar')
-    provided files('../doi-common/build/libs/doi-common.jar')
-    provided files('external-jars/android-support-v4.jar')
+    provided 'com.android.support:support-v4:19.+'
+    provided files('external-jars/dl-lib.jar')
+    provided files('external-jars/doi-common.jar')
 }
-
-task beforeBuild(dependsOn: [':doi-common:buildLib', ':lib:buildLib']) {
-
-}
-
-preBuild.dependsOn beforeBuild

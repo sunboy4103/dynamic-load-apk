@@ -34,12 +34,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    provided project(':lib')
-    provided files('../main-host/build/libs/main-host.jar')
+    provided 'com.android.support:support-v4:19.+'
+    provided files('external-jars/dl-lib.jar')
+    provided files('external-jars/main-host.jar')
 }
-
-task beforeBuild(dependsOn: ':main-host:buildLib') << {
-    println 'do it before build'
-}
-
-preBuild.dependsOn beforeBuild

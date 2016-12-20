@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ryg.dynamicload.sample.doihost"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
-   <uses-sdk
+    <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="18" />
 
@@ -38,11 +38,11 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        >
+        android:label="@string/app_name">
         <activity
             android:name="com.ryg.dynamicload.sample.doihost.MainActivity"
-            android:label="@string/app_name" >
+            android:icon="@mipmap/push_icon"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,10 +51,18 @@
         </activity>
         <activity
             android:name="com.ryg.dynamicload.DLProxyActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="com.ryg.dynamicload.proxy.activity.VIEW" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ryg.dynamicload.DLProxyFragmentActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryg.dynamicload.proxy.activity.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

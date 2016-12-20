@@ -33,12 +33,6 @@ android {
 }
 
 dependencies {
-    provided files('../../../lib/build/libs/lib.jar')
-    provided files('external-jars/android-support-v4.jar')
+    provided files('external-jars/dl-lib.jar')
+    provided 'com.android.support:support-v4:19.+'
 }
-
-task beforeBuild(dependsOn: ':lib:buildLib') << {
-
-}
-
-preBuild.dependsOn beforeBuild
